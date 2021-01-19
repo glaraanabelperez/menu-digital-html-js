@@ -120,11 +120,11 @@ var postres = [
     ];
 
 function focusMethod(){
-    console.log("hola");
-    if($("#sumar").hasClass("sumar")){
-        $("#sumar").removeClass("sumar");
+    verPedido();
+    if($("#subir").hasClass("sumar")){
+        $("#subir").removeClass("sumar");
     }else{
-        $("#sumar").addClass("sumar");
+        $("#subir").addClass("sumar");
     }
 
 }
@@ -221,8 +221,11 @@ function crearSecciones(){
     llenarDatos();
 }
 
-function verPedido(){  
-    window.scroll(0, 0);
+function verPedido(){ 
+    if($("#mensajeRelicePedido").hasClass("ver")){
+        $("#mensajeRelicePedido").removeClass("ver");
+        $("#mensajeRelicePedido").addClass("oculto");
+    }
     var checkboxes = document.getElementsByName("checkBox");
     let card ='';
     card +='<div class="fondo-pedido">';
