@@ -222,7 +222,7 @@ function crearSecciones(){
 }
 
 function verPedido(){  
-      
+    window.scroll(0, 0);
     var checkboxes = document.getElementsByName("checkBox");
     let card ='';
     card +='<div class="fondo-pedido">';
