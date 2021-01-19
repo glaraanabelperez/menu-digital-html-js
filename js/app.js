@@ -203,7 +203,7 @@ function llenarDatos(){
 }
 
 function crearSecciones(){
-    const base = document.querySelector('#base');
+
     for(let i=0; i<seccion.length; i++){
         let divBase=document.createElement("div");
         divBase.innerHTML=`
