@@ -5,7 +5,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+.oculto{
+    display: none;
+    background: none;
+    border: none;
+}
+.ver{
+    display: block;
 
+}
 html,
 body {
     height: 100%;
