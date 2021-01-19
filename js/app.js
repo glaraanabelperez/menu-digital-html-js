@@ -119,6 +119,16 @@ var postres = [
         {clave:"waffle frutal", valor: 430}
     ];
 
+function focusMethod(){
+    console.log("hola");
+    if($("#sumar").hasClass("sumar")){
+        $("#sumar").removeClass("sumar");
+    }else{
+        $("#sumar").addClass("sumar");
+    }
+
+}
+
 function llenarDatos(){
     var vector=0;
     var c="n";
@@ -181,7 +191,7 @@ function llenarDatos(){
                 div.innerHTML=`
                 <div class="contenedor-input">
                 <div class="espacio-check">
-                    <input class="form-check-input" type="checkbox" id="${i}"  name="checkBox" value="${c}"">
+                    <input class="form-check-input" type="checkbox" onclick="focusMethod()" id="${i}"  name="checkBox" value="${c}"">
                     <label class="form-check-label">${c}</label>    
                 </div>
                 <label class="form-check-label label2">${v}</label>
@@ -211,15 +221,22 @@ function crearSecciones(){
     llenarDatos();
 }
 
-function verPedido(){    
+function verPedido(){  
+      
     var checkboxes = document.getElementsByName("checkBox");
-    let card = '<img style="margin-bottom: 20px;" class="anchoIcono" src="images/pointing-down.png" alt="">';
+    let card ='';
+    card +='<div class="fondo-pedido">';
+    card +='<h3>Su pedido</h3>';
+    card +='<hr class="colorHr1">';
+    card +='<img style="margin:auto;" class="anchoIcono" src="images/pointing-down.png" alt="">';       
+    card +='</div>';
+
     for(var i = 0; i < checkboxes.length; i++)  
     {  
         if(checkboxes[i].checked)  {
             console.log("hola");  
             console.log(checkboxes[i].value);
-            card += '<p>'+ checkboxes[i].value +'</p>';
+            card += '<p class="icon-check">'+" " + checkboxes[i].value +'</p>';
             $('#listPedido').html(card);
         }
     }
