@@ -99,6 +99,7 @@ p {
     opacity: 1!important;
 }
 
+
 .irArriba:hover {
     background: transparent;
     border: 2px solid #20bf6b;
@@ -202,6 +203,20 @@ li img{
     margin-left:2% ;
     padding: 2%;
 }
+.fondo-pedido{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:rgb(249, 248, 248);
+    border-radius: 20px;
+    margin-left:2% ;
+    padding: 2%;
+}
+#listPedido{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 .form-check{
     margin: 2%;
@@ -216,29 +231,48 @@ li img{
     margin-top: 2%;
 }
 
- .web {
-    width:100px ;
-    display: flex;
-    padding: 8px;
+.irArriba2 {
+    display: block!important;
+    padding: 15px;
+    background:rgb(218, 217, 217);
+    border: none;
+    font-size: 18px;
     color: #fff;
-    flex-direction: row;
-    right: 200px;
-    top: 120px;
+    cursor: pointer;
     position: fixed;
-    background-color: #20bf6b;
-    border: 2px solid #20bf6b;
-    border-radius: 20px;
+    width:100px;
+    height: 100px;
+    border-radius: 50px;
+    top: 220px;
+    right: 14%;
+    z-index: 999;
+    opacity: 1!important;
+}
+
+.sumar{
+    background-color: yellow !important;
+    transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out;
+    opacity: 1!important;
+}
+.sumar{
+    background-color: rgb(248, 248, 184) !important;
+    transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out;
+    opacity: 1!important;
 }
 
 .boxSuPedido{
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
     text-align: left;
 }
 .logo-web{
     width: 60%;
-    margin-left: 10%;
+    margin-left: 20%;
+    margin-bottom: 5%;
 }
 .logo-web img{
     width: 100%;
@@ -314,25 +348,36 @@ li img{
     .logo-web img{
         width: 100%;
     }
-
-
-.web2 {
-    width:60px ;
-    display: flex;
-    padding: 8px;
-    color: #fff;
-    flex-direction: row;
-    right: 10px;
-    top: 100px;
-    position: fixed;
-    background-color: #20bf6b;
-    border: 2px solid #20bf6b;
-    border-radius: 20px;
-}
-
+    .irArriba2 {
+        display: block!important;
+        padding: 15px;
+        background:rgb(218, 217, 217);
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        top: 220px;
+        right: 70px;
+        z-index: 999;
+        opacity: 1!important;
+    }
 }
 
 @media screen and (max-width:415px) {
+
+    header{
+        width: 0%;
+    }
+    main{
+        width: 100%;
+        text-align: center;
+        margin: 2%;
+    }
+
     .current {
         border-bottom: 2px solid #f5f5f5;
     }
@@ -346,6 +391,10 @@ li img{
     .anchoIcono{
         width: 22px;
     }
+    .navbar{
+        background-color: white;
+        width: 28%;
+    }
     .navbar-brand {
         display: block;
     }
@@ -355,14 +404,32 @@ li img{
     .nav-item {
         text-align: center;
     }
-
+    .irArriba2 {
+        display: block!important;
+        padding: 15px;
+        background:rgb(218, 217, 217);
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        top: 120px;
+        right: 2%;
+        z-index: 999;
+        opacity: 1!important;
+    }
     /* ESTILOS FEATURES */
     .cardFeatures {
         background: #ffffff;
-        width: 85%;
-        margin-left: 5%;
+        width: 100%;
+        padding: 0px 10px 10px 0px !important;
+        margin-left: 0px;
+        margin-bottom: 0px !important;
         border-radius: 3px;
-        padding: 1.25rem;
+        padding-left: 5%;
         transition: 0.4s;
         margin-bottom: 20px;
     }
@@ -389,35 +456,40 @@ li img{
     .boxSuPedido{
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
-        margin-left: 20%;
         text-align: left;
+        margin-top: 30%;
     }
     .logo-web{
-        width: 50%;
-        margin-left: 22%;
+        position: fixed;
+        width: 100%;
+        margin: 0% 0% 5% 0%;
+        background: white;
+        z-index: 999;
+        opacity: 1!important;
+
         }
         .logo-web img{
-            width: 100%;
+            width: 53%;
+            display: block;
+            margin-left: 120px;
         }
 
-    
- .web {
-    display: none;
-}
-
-.web2 {
-    width:60px ;
-    display: flex;
-    padding: 8px;
+.irArriba2 {
+    display: block!important;
+    padding: 15px;
+    background:rgb(218, 217, 217);
+    border: none;
+    font-size: 18px;
     color: #fff;
-    flex-direction: row;
-    right: 10px;
-    top: 100px;
+    cursor: pointer;
     position: fixed;
-    background-color: #20bf6b;
-    border: 2px solid #20bf6b;
-    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 120px;
+    right: 2%;
+    z-index: 999;
+    opacity: 1!important;
 }
    
 }
